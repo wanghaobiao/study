@@ -5,6 +5,6 @@ public class ClientMain {
         IFactory factory = new Factory();
         factory.createProduct1().show();
         factory.createProduct2().show();
-        //提交代码测试
+        //提交代码测试1
     }
 }
