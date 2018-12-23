@@ -1,5 +1,7 @@
 package com.study.pattern.facadePattern;
 
+import org.apache.log4j.Logger;
+
 /**
  * Disk子系统类
  * @author Administrator
