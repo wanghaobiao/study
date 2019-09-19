@@ -1,4 +1,5 @@
-package com.study.pattern.flyweightPattern;
+package com.study.pattern.flyweightPattern.flyweightPatternII;
+
 //体育馆
 public class TiYuGuan implements Jianzhu {
     private String name;

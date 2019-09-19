@@ -1,4 +1,4 @@
-package com.study.pattern.flyweightPattern;
+package com.study.pattern.flyweightPattern.flyweightPatternII;
 /*
 *
 * 建筑

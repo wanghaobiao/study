@@ -1,4 +1,5 @@
-package com.study.pattern.flyweightPattern;
+package com.study.pattern.flyweightPattern.flyweightPatternII;
+
 /*
 *
 * 享元模式
@@ -15,7 +16,7 @@ public class FlyweightMain {
             tyg.setName("中国体育馆");
             tyg.setShape("圆形");
             tyg.use();
-            System.out.println("对象池中对象数量为："+JianZhuFactory.getSize());
+            System.out.println("对象池中对象数量为："+ JianZhuFactory.getSize());
         }
     }
 }
