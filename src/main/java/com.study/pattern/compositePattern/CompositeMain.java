@@ -4,7 +4,7 @@ package com.study.pattern.compositePattern;
 * 组合模式
 *
 * */
-public class compositeMain {
+public class CompositeMain {
     public static void main(String args[]) {
         Folder folder1,folder2,folder3;
         folder1 = new Folder("Sunny的资料");

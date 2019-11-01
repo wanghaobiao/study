@@ -9,7 +9,10 @@ public class HTMLFilter implements Filter {
                 .replace('<', '[').replace('>', ']')+
                 //后面添加的是便于我们观察代码执行步骤的字符串
                 "----HTMLFilter()";
-        chain.doFilter(request, response,chain);
+        if(chain != null){
+            chain.doFilter(request, response,chain);
+        }
+
         response.responseStr+="---HTMLFilter()";
     }
 

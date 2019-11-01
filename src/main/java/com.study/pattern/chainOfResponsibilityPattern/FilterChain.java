@@ -16,7 +16,7 @@ public class FilterChain implements Filter{
         return this;
     }
     public void doFilter(Request request,Response response,FilterChain chain){
-        //index初始化为0,filters.size()为3，不会执行return操作
+       /* //index初始化为0,filters.size()为3，不会执行return操作
         if(index==filters.size()){
             return;
         }
@@ -24,6 +24,10 @@ public class FilterChain implements Filter{
         Filter f=filters.get(index);
         index++;
         //根据索引值获取对应的规律规则对字符串进行处理
-        f.doFilter(request, response, chain);
+        f.doFilter(request, response, chain);*/
+        for (int i = 0; i < filters.size(); i++) {
+            filters.get(i).doFilter(request, response, null);
+
+        }
     }
 }

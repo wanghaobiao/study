@@ -7,6 +7,7 @@ package com.study.pattern.adapterPattern.interfacesAdapter;
 public class interfacesAdapterMain {
     public static void main(String[] args) {
         A a = new Ashili();
+
         a.a();
         a.d();
     }

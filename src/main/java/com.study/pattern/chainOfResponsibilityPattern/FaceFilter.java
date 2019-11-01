@@ -9,7 +9,10 @@ public class FaceFilter implements Filter {
         request.requestStr = request.requestStr.replace(":):", "^V^")
                 //后面添加的是便于我们观察代码执行步骤的字符串
                 + "----FaceFilter()";
-        chain.doFilter(request, response, chain);
+        if(chain != null){
+            chain.doFilter(request, response,chain);
+        }
+
         response.responseStr += "---FaceFilter()";
     }
 

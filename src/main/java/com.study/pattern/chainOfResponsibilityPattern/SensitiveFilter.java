@@ -9,7 +9,10 @@ public class SensitiveFilter implements Filter{
                 .replace("被就业", "就业").replace("敏感", "")+
                 //后面添加的是便于我们观察代码执行步骤的字符串
                 " ---sensitiveFilter()";
-        chain.doFilter(request, response,chain);
+        if(chain != null){
+            chain.doFilter(request, response,chain);
+        }
+
         response.responseStr+="---sensitiveFilter()";
     }
 
