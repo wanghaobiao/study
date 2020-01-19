@@ -1,6 +1,9 @@
 package com.study.basics.serializable.serializable1;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 public class Teacher implements Serializable {
 
@@ -30,15 +33,17 @@ public class Teacher implements Serializable {
 
     public static void main(String[] args) throws Exception {
         try (
-            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("teacher.txt"))) {
+            ObjectOutputStream stream = new ObjectOutputStream(new FileOutputStream("teacher.txt"))) {
             Person person = new Person("路飞", 20,null);
             Teacher t1 = new Teacher("雷利", person);
             Teacher t2 = new Teacher("红发香克斯", person);
             //依次将4个对象写入输入流
-            oos.writeObject(t1);
-            oos.writeObject(t2);
-            oos.writeObject(person);
-            oos.writeObject(t2);
+            stream.writeObject(t1);
+            stream.writeObject(t2);
+            stream.writeObject(person);
+            stream.writeObject(t2);
+
+            List<Map<String, Object>> list = new ArrayList<>();
         }
     }
 }
