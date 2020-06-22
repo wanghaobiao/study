@@ -101,6 +101,7 @@ public class DebugLogAop {
     //execution表达式  可自行定义
     @Around("execution(* com..*(..))  ")
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
+
         Object result = "";
         Object[] args = joinPoint.getArgs();
         if(isOpne && isOpneOut && isPrint(joinPoint)){
