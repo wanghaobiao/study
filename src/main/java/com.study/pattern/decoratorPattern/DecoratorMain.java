@@ -7,11 +7,11 @@ package com.study.pattern.decoratorPattern;
 public class DecoratorMain {
     public static void main(String[] args) {
         Man man = new Man();
-        ManDecoratorA md1 = new ManDecoratorA();
-        ManDecoratorB md2 = new ManDecoratorB();
+        ManDecoratorA manDecoratorA = new ManDecoratorA();
+        ManDecoratorB manDecoratorB = new ManDecoratorB();
 
-        md1.setPerson(man);
-        md2.setPerson(md1);
-        md2.eat();
+        manDecoratorA.setPerson(man);
+        manDecoratorB.setPerson(manDecoratorA);
+        manDecoratorB.eat();
     }
 }
