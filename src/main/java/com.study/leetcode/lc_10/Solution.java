@@ -34,6 +34,7 @@ public class Solution {
      * 链接：https://leetcode-cn.com/problems/number-of-steps-to-reduce-a-number-to-zero
      * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
+
     public static int numberOfSteps (int num) {
         int count = 0;
         if((num & 1) ==1 ){
