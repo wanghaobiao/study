@@ -1,5 +1,5 @@
 package com.study.aspect;
-import com.study.util.UIRuleUtil;
+import com.study.util.PowerUtil;
 import javassist.ClassPool;
 import javassist.CtClass;
 import javassist.CtMethod;
@@ -77,7 +77,7 @@ public class DebugLogAop {
                 if(arg instanceof HttpServletRequest){
                     HttpServletRequest temp = (HttpServletRequest) arg;
                     sb.append( toMap( temp ));
-                }else if(!(arg instanceof Class) && UIRuleUtil.getString( arg ).indexOf( entityMark ) != -1){
+                }else if(!(arg instanceof Class) && PowerUtil.getString( arg ).indexOf( entityMark ) != -1){
                     sb.append( toMap( arg ));
                 }else{
                     sb.append(arg);
@@ -113,10 +113,10 @@ public class DebugLogAop {
             if(result instanceof HttpServletRequest){
                 HttpServletRequest temp = (HttpServletRequest) result;
                 sb.append( toMap( temp ));
-            }else if(UIRuleUtil.getString( result ).indexOf( entityMark ) != -1){
+            }else if(PowerUtil.getString( result ).indexOf( entityMark ) != -1){
                 sb.append( toMap( result ));
             }else{
-                sb.append( ( UIRuleUtil.getString( result ).equals( "" ) ? "void" : UIRuleUtil.getString( result )));
+                sb.append( ( PowerUtil.getString( result ).equals( "" ) ? "void" : PowerUtil.getString( result )));
             }
             if((className.indexOf( "Controller" ) != -1 && isOpneController) || (className.indexOf( "Service" ) != -1 && isOpneServe)){
                 System.err.println(stackTraceElement + sb.toString());
