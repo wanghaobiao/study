@@ -1,6 +1,7 @@
 package com.study.leetcode.lc_10;
 
 public class Solution {
+    
 
     /**
      * 给你一个非负整数 num ，请你返回将它变成 0 所需要的步数。 如果当前数字是偶数，你需要把它除以 2 ；否则，减去 1 。
@@ -34,7 +35,6 @@ public class Solution {
      * 链接：https://leetcode-cn.com/problems/number-of-steps-to-reduce-a-number-to-zero
      * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
-
     public static int numberOfSteps (int num) {
         int count = 0;
         if((num & 1) ==1 ){
