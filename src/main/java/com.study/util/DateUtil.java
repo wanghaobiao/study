@@ -264,13 +264,13 @@ public class DateUtil {
      * @author  wanghb
      * @edit
      */
-    public static String getCurrentDate() {
+    public static String getNowYear() {
         return toString(new Date(), DATE_YEAR);
     }
 
 
     /**
-     * 获取某个月份的的第一天
+     * 获取当前,下个月,上个月 的的第一天
      * @return index 0 为当前月  1为下个月  -1为上个月  以此类推
      * @author wanghb
      * @date 2019-06-25
@@ -282,7 +282,6 @@ public class DateUtil {
         Calendar cale = Calendar.getInstance();
         cale.add(Calendar.MONTH, index);
         cale.set(Calendar.DAY_OF_MONTH, 1);
-        //当前月的第一天
         return cale.getTime();
     }
 
@@ -294,47 +293,17 @@ public class DateUtil {
      * @author wanghb
      * @date 2019-06-25
      */
-    public static List<String> getMiddleDate(Date start, Date end) {
+    public static List<String> getMiddleDate(Date startDate, Date endDate) {
         List<String> list = new ArrayList<>();
-        long s = start.getTime();
-        long e = end.getTime();
+        long s = startDate.getTime();
+        long e = endDate.getTime();
         Long oneDay = 1000 * 60 * 60 * 24l;
         while (s <= e) {
-            start = new Date(s);
-            list.add(new SimpleDateFormat("yyyy-MM-dd").format(start));
+            startDate = new Date(s);
+            list.add(new SimpleDateFormat("yyyy-MM-dd").format(startDate));
             s += oneDay;
         }
         return list;
-    }
-
-
-    /**
-     * @description  获取两个日期之间的日期
-     * @param  startDate  开始时间
-     * @param  endData  结束时间
-     * @return  返回结果
-     * @date  20/07/03 17:11
-     * @author  wanghb
-     * @edit
-     */
-    public static List<Date> getDateList(Date startDate, Date endData)
-    {
-        List lDate = new ArrayList();
-        lDate.add(startDate);
-        Calendar calBegin = Calendar.getInstance();
-        // 使用给定的 Date 设置此 Calendar 的时间
-        calBegin.setTime(startDate);
-        Calendar calEnd = Calendar.getInstance();
-        // 使用给定的 Date 设置此 Calendar 的时间
-        calEnd.setTime(endData);
-        // 测试此日期是否在指定日期之后
-        while (endData.after(calBegin.getTime()))
-        {
-            // 根据日历的规则，为给定的日历字段添加或减去指定的时间量
-            calBegin.add(Calendar.DAY_OF_MONTH, 1);
-            lDate.add(calBegin.getTime());
-        }
-        return lDate;
     }
 
 
@@ -346,7 +315,7 @@ public class DateUtil {
      * @author  wanghb
      * @edit
      */
-    public static int getCoutDays(Date date){
+    public static int getMonthCountDays(Date date){
         Calendar cal = Calendar.getInstance();
         cal.setTime(new Date());//设置时间
         int year = cal.get(Calendar.YEAR);//获取年份
@@ -365,7 +334,7 @@ public class DateUtil {
      * @author  wanghb
      * @edit
      */
-    public static int getCoutDays(Integer year){
+    public static int getYearCountDays(Integer year){
         Calendar cal = Calendar.getInstance();
         cal.set(Calendar.YEAR, year);
         int actualMaximum = cal.getActualMaximum(Calendar.DAY_OF_YEAR);
@@ -419,7 +388,7 @@ public class DateUtil {
     /**
      * @description  判断一个时间是上午还是下午  0：上午  1：下午  -1 无法识别
      * @param  aLong  时间戳
-     * @param  format
+     * @param  format  日期格式
      * @return  返回结果
      * @date  20/07/03 16:54
      * @author  wanghb
@@ -443,7 +412,7 @@ public class DateUtil {
 
 
     /**
-     * @description  判断当前时间是否在[startTime, endTime]区间，注意时间格式要一致
+     * @description  判断当前时间是否在 startTime ~ endTime  区间，注意时间格式要一致
      * @param  nowTime  当前时间
      * @param  startTime  开始时间
      * @param  endTime  结束时间
