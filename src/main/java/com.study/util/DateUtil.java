@@ -1,10 +1,6 @@
 package com.study.util;
 
-import com.study.blockchain.blockchain1.StringUtil;
-import sun.security.provider.SHA;
-
 import java.math.BigDecimal;
-import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -35,7 +31,7 @@ public class DateUtil {
      * @author  wanghb
      * @edit
      */
-    public static BigDecimal getHourCount(String starAmp,String endAmp,Integer scalse){
+    public static BigDecimal countHour(String starAmp,String endAmp,Integer scalse){
         if("".equals(starAmp) || "".equals(endAmp)){
             return BigDecimal.ZERO;
         }
@@ -62,7 +58,7 @@ public class DateUtil {
      * @author  wanghb
      * @edit
      */
-    public static BigDecimal getHourCount(Date startDate,Date endDate,Integer scalse){
+    public static BigDecimal countHour(Date startDate,Date endDate,Integer scalse){
         if(PowerUtil.isNull( startDate ) || PowerUtil.isNull( endDate ) ){
             return BigDecimal.ZERO;
         }
@@ -90,7 +86,7 @@ public class DateUtil {
      * @author  wanghb
      * @edit
      */
-    public static Date dateCount(Date date, Integer days,int calendarType) {
+    public static Date countDate(Date date, Integer days,int calendarType) {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(date);
         calendar.add(calendarType, days);
@@ -112,7 +108,7 @@ public class DateUtil {
      * @author  wanghb
      * @edit
      */
-    public static int dayCompare(Date startDate,Date endDate,String type){
+    public static int countCompare(Date startDate,Date endDate,String type){
         Calendar  from  =  Calendar.getInstance();
         from.setTime(startDate);
         Calendar  to  =  Calendar.getInstance();
@@ -147,7 +143,7 @@ public class DateUtil {
      * @author  wanghb
      * @edit
      */
-    public static BigDecimal minuteCount(String startTime, String endTime,Integer scale){
+    public static BigDecimal countMinute(String startTime, String endTime,Integer scale){
         SimpleDateFormat sd = new SimpleDateFormat("HH:mm:ss");
         long nd = 1000 * 24 * 60 * 60;// 一天的毫秒数
         long nh = 1000 * 60 * 60;// 一小时的毫秒数
@@ -190,7 +186,7 @@ public class DateUtil {
      * @author  wanghb
      * @edit
      */
-    public static String getWeek(Date date ,String[] weeks){
+    public static String toWeek(Date date ,String[] weeks){
         Calendar cal = Calendar.getInstance();
         cal.setTime(date);
         int week_index = cal.get(Calendar.DAY_OF_WEEK) - 1;
@@ -228,7 +224,7 @@ public class DateUtil {
      * @author  wanghb
      * @edit
      */
-    public static String longToDate(long date, String format) {
+    public static String toDate(long date, String format) {
         SimpleDateFormat df = new SimpleDateFormat(format);
         return df.format(date);
     }
@@ -258,13 +254,13 @@ public class DateUtil {
 
 
     /************************************************日期转化结束************************************************/
-    /************************************************获取日期结束************************************************/
+    /************************************************获取日期开始************************************************/
 
 
     /**
-     * @description  获取当年年分
-     * @return
-     * @date  20/07/03 16:33
+     * @description  获取当年年份
+     * @return  年份
+     * @date  20/07/03 17:54
      * @author  wanghb
      * @edit
      */
@@ -296,6 +292,7 @@ public class DateUtil {
      * @return start 开始日期
      * @return end 结束日期
      * @author wanghb
+     * @date 2019-06-25
      */
     public static List<String> getMiddleDate(Date start, Date end) {
         List<String> list = new ArrayList<>();
@@ -320,7 +317,7 @@ public class DateUtil {
      * @author  wanghb
      * @edit
      */
-    public static List<Date> findDates(Date startDate, Date endData)
+    public static List<Date> getDateList(Date startDate, Date endData)
     {
         List lDate = new ArrayList();
         lDate.add(startDate);
@@ -349,7 +346,7 @@ public class DateUtil {
      * @author  wanghb
      * @edit
      */
-    public static int getDays(Date date){
+    public static int getCoutDays(Date date){
         Calendar cal = Calendar.getInstance();
         cal.setTime(new Date());//设置时间
         int year = cal.get(Calendar.YEAR);//获取年份
@@ -362,14 +359,13 @@ public class DateUtil {
 
     /**
      * @description  获取某一年一共多少天
-     * @param  year
+     * @param  year  年份
      * @return  返回结果
      * @date  20/07/03 17:23
      * @author  wanghb
      * @edit
      */
-    public static int getCoutDays(int year){
-
+    public static int getCoutDays(Integer year){
         Calendar cal = Calendar.getInstance();
         cal.set(Calendar.YEAR, year);
         int actualMaximum = cal.getActualMaximum(Calendar.DAY_OF_YEAR);
@@ -405,7 +401,7 @@ public class DateUtil {
      * @author  wanghb
      * @edit
      */
-    public static Boolean hourDiff(String time1,String time2){
+    public static Boolean compareHour(String time1,String time2){
         if("".equals(time1) || "".equals(time2)){
             return false;
         }
@@ -431,9 +427,9 @@ public class DateUtil {
      */
     public static int amEnum = 0;
     public static int pmEnum = 1;
-    public static int getAMPM(long timestamp) {
+    public static int isAMPM(long timestamp) {
         try {
-            String s = longToDate(timestamp, "yyyy-MM-dd HH:mm:ss");
+            String s = toDate(timestamp, "yyyy-MM-dd HH:mm:ss");
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             Date date = sdf.parse(s);
             GregorianCalendar ca = new GregorianCalendar();
