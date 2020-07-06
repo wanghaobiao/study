@@ -21,6 +21,12 @@
     </build>
 
     <dependencies>
+        <!--基础包引入-->
+        <dependency>
+            <groupId>com.server</groupId>
+            <artifactId>basis</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
         <!--日志 start-->
         <dependency>
             <groupId>log4j</groupId>
