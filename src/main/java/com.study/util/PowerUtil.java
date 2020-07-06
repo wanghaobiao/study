@@ -1,14 +1,15 @@
 package com.study.util;
 
+import com.study.blockchain.blockchain1.StringUtil;
 import org.springframework.util.StringUtils;
 
 import java.math.BigDecimal;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class PowerUtil {
     public PowerUtil() {
@@ -349,16 +350,6 @@ public class PowerUtil {
         return value == null ? "" : String.valueOf(value);
     }
 
-    public static Date date(String date) {
-        Date result = null;
-
-        try {
-            result = DateTimeUtils.parseDate(date);
-            return result;
-        } catch (Exception var3) {
-            return null;
-        }
-    }
 
     public static Date now() {
         return new Date();
@@ -654,13 +645,6 @@ public class PowerUtil {
         return value == null;
     }
 
-    public static Date getDateValue(Object value) {
-        if (value == null) {
-            return null;
-        } else {
-            return value instanceof String ? date((String)value) : (Date)value;
-        }
-    }
 
     public static boolean isNotNull(Object value) {
         if (value instanceof Integer) {
@@ -752,5 +736,84 @@ public class PowerUtil {
     public static String format(Date value, String format) {
         DateFormat formatter = new SimpleDateFormat(format);
         return formatter.format(value);
+    }
+
+
+    /**
+     * @description  将命名改为驼峰的方法
+     * @param  map  转换的对象
+     * @return  转换的结果
+     * @date  20/07/06 9:12
+     * @author  wanghb
+     * @edit
+     */
+    public static Map<String, Object> toHump(Map<String, Object> map) {
+        Map<String,Object> humpMap = new HashMap<>();
+        humpMap.clear();
+        Set<Map.Entry<String, Object>> entrySet = map.entrySet();
+        Iterator<Map.Entry<String, Object>> iter = entrySet.iterator();
+        while (iter.hasNext())
+        {
+            Map.Entry<String, Object> entry = iter.next();
+            String keyStr = entry.getKey();
+            Object valueStr = entry.getValue();
+            humpMap.put( toHump(keyStr),valueStr);
+        }
+        return humpMap;
+    }
+
+    public static final char UNDERLINE = '_';
+
+    /**
+     * @description  下划线格式字符串转换为驼峰格式字符串
+     * @param  param  参数
+     * @return  转换的结果
+     * @date  20/07/06 9:12
+     * @author  wanghb
+     * @edit
+     */
+    public static String toHump(String param) {
+
+        if (param == null || "".equals(param.trim())) {
+            return "";
+        }
+        int len = param.length();
+        StringBuilder sb = new StringBuilder(len);
+        for (int i = 0; i < len; i++) {
+            char c = param.charAt(i);
+            if (c == UNDERLINE) {
+                if (++i < len) {
+                    sb.append(Character.toUpperCase(param.charAt(i)));
+                }
+            } else {
+                sb.append(c);
+            }
+        }
+        return sb.toString();
+    }
+
+    /**
+     * 驼峰法转下划线 方法格式
+     * @param line String类型 要处理的字符串
+     * @return String类型
+     * @author wanghb
+     * @date 2017-11-13
+     * @version V1.0
+     */
+    public static String toUnderline(String line) {
+        if (line == null || "".equals(line)) {
+            return "";
+        }
+        line = String.valueOf(line.charAt(0)).toUpperCase()
+                .concat(line.substring(1));
+        StringBuffer sb = new StringBuffer();
+        Pattern pattern = Pattern.compile("[A-Z]([a-z\\d]+)?");
+        Matcher matcher = pattern.matcher(line);
+        while (matcher.find()) {
+            String word = matcher.group();
+            sb.append(word.toUpperCase());
+            sb.append(matcher.end() == line.length() ? "" : "_");
+        }
+        return sb.toString();
     }
 }
