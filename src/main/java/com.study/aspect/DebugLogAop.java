@@ -44,11 +44,11 @@ public class DebugLogAop {
     /**
      * 是否开启控制层打印
      */
-    private final boolean isOpneController = false;
+    private final boolean isOpneController = true;
     /**
      * 是否开启服务层打印
      */
-    private final boolean isOpneServe = true;
+    private final boolean isOpneServe = false;
     /**
      * 实体标识
      */
