@@ -13,15 +13,12 @@ import java.util.*;
  *@version V1.0
  */
 public class JdbcTemplateUtil {
-
-
     /**
      * 用于处理批量插入时将实体类转换成符合jdbc的参数要求 方法
      *
      * @param listBean01 List<T> 类型 要处理的字符串
      * @return String类型
-     *
-     * @author yucl
+     * @author wanghb
      * @date 2017-11-13
      * @version V1.0
      */
@@ -43,10 +40,10 @@ public class JdbcTemplateUtil {
      * @description  将list转化为 in 参数
      * @param  list  数据
      * @param  name  键名称
-     * @return  .
+     * @return  返回结果
      * @date  20/06/04 18:11
      * @author  wanghb
-     * @edit  .
+     * @edit
      */
     public static  String toInParams(List<Map<String, Object>> list,String name){
         StringBuffer ids = new StringBuffer();
@@ -64,10 +61,10 @@ public class JdbcTemplateUtil {
      * @description  将list转化为 in 参数
      * @param  list  数据
      * @param  name  键名称
-     * @return  .
+     * @return  返回结果
      * @date  20/06/04 18:11
      * @author  wanghb
-     * @edit  .
+     * @edit
      */
     public static  String toInParams(List<Map<String, Object>> list,String name,Integer pageNo,Integer pageNum){
         Set<String> idsSet = new LinkedHashSet<>();
@@ -96,7 +93,7 @@ public class JdbcTemplateUtil {
      * @return  返回值
      * @date  20/06/15 15:06
      * @author  wanghb
-     * @edit  .
+     * @edit
      */
     public static String toInOrder(String inParams,String fieldName){
         StringBuffer inOrder = new StringBuffer(" case ").append( fieldName );
@@ -111,9 +108,7 @@ public class JdbcTemplateUtil {
 
     /**
      * 用于生成查询条件语句的工具类 方法(模仿jpa的做法)
-     *
-     * TODO eq等于、  neq不相等,  gt大于,  gte大于等于, lt小于, lte小于等于,like  模糊查询
-     *
+     * eq等于、  neq不相等,  gt大于,  gte大于等于, lt小于, lte小于等于,like  模糊查询
      * @param SQL String 类型 要处理的SQL  必须包含 where 1 = 1
      * @return String类型
      * @author wanghb
