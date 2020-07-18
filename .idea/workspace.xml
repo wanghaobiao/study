@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e1bda149-2add-4a66-918d-ffb83cecca99" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1cAOB56Paymggvzu00PguL7LViQ" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com.study/leetcode" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.study.leetcode" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.study.util" />
+      <recent name="com.study.leetcode.lc_10" />
+      <recent name="com.study.leetcode.lc_9" />
+      <recent name="com.study.leetcode.lc_" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaSpace\study\src\main\java\com.study\leetcode" />
+      <recent name="E:\IdeaSpace\study\src\main\java\com.study" />
+      <recent name="E:\IdeaSpace\study\src\main\java\com.study\util" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.study.leetcode.lc_10.Solution" />
+      <module name="study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.study.leetcode.lc_10.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Solution" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e1bda149-2add-4a66-918d-ffb83cecca99" name="Default Changelist" comment="" />
+      <created>1581402659993</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581402659993</updated>
+      <workItem from="1581402661179" duration="602000" />
+      <workItem from="1582098777879" duration="1000" />
+      <workItem from="1582875568755" duration="1907000" />
+      <workItem from="1582882881408" duration="60000" />
+      <workItem from="1583133563578" duration="4417000" />
+      <workItem from="1583144504985" duration="1994000" />
+      <workItem from="1583198836086" duration="615000" />
+      <workItem from="1583223642488" duration="666000" />
+      <workItem from="1583283813266" duration="48000" />
+      <workItem from="1583485938182" duration="69000" />
+      <workItem from="1584842992723" duration="673000" />
+      <workItem from="1589967794181" duration="1792000" />
+      <workItem from="1590022462330" duration="30000" />
+      <workItem from="1590034000265" duration="622000" />
+      <workItem from="1591405196877" duration="2295000" />
+      <workItem from="1592551475281" duration="881000" />
+      <workItem from="1592787645972" duration="1925000" />
+      <workItem from="1592789655919" duration="1951000" />
+      <workItem from="1593483378835" duration="3253000" />
+      <workItem from="1593505534088" duration="796000" />
+      <workItem from="1593510765526" duration="605000" />
+      <workItem from="1593567352050" duration="704000" />
+      <workItem from="1593765024641" duration="5786000" />
+      <workItem from="1593997642097" duration="1298000" />
+    </task>
+    <task id="LOCAL-00001" summary="代码提交 wanghb">
+      <created>1592787679293</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1592787679293</updated>
+    </task>
+    <task id="LOCAL-00002" summary="代码提交 wanghb">
+      <created>1592787798184</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1592787798184</updated>
+    </task>
+    <task id="LOCAL-00003" summary="代码提交 wanghb">
+      <created>1593484164617</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1593484164617</updated>
+    </task>
+    <task id="LOCAL-00004" summary="代码提交 wanghb">
+      <created>1593489982522</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1593489982522</updated>
+    </task>
+    <task id="LOCAL-00005" summary="代码提交 wanghb">
+      <created>1593490131547</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1593490131547</updated>
+    </task>
+    <task id="LOCAL-00006" summary="代码提交 wanghb">
+      <created>1593769768689</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1593769768689</updated>
+    </task>
+    <task id="LOCAL-00007" summary="代码提交 wanghb">
+      <created>1593770320719</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1593770320719</updated>
+    </task>
+    <task id="LOCAL-00008" summary="代码提交 wanghb">
+      <created>1593770790137</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1593770790137</updated>
+    </task>
+    <task id="LOCAL-00009" summary="代码提交 wanghb">
+      <created>1593998914690</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1593998914690</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="代码提交 wanghb" />
+    <option name="LAST_COMMIT_MESSAGE" value="代码提交 wanghb" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="842" y="371" key="#Notifications" timestamp="1592787769240">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="842" y="371" key="#Notifications/0.0.1920.1019/1920.0.1080.1890@0.0.1920.1019" timestamp="1592787769240" />
+    <state x="655" y="269" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1593765503098">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="655" y="269" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.0.1920.1019@0.0.1920.1019" timestamp="1593765503098" />
+    <state x="414" y="164" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593769665817">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="414" y="164" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1019@0.0.1920.1019" timestamp="1593769665817" />
+    <state x="743" y="200" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1593998571928">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="743" y="200" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.1920.1019@0.0.1920.1019" timestamp="1593998571928" />
+    <state x="739" y="415" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1592788417932">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="739" y="415" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1019/1920.0.1080.1890@0.0.1920.1019" timestamp="1592788417932" />
+    <state x="560" y="94" key="CommitChangelistDialog2" timestamp="1593998913917">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="560" y="94" key="CommitChangelistDialog2/0.0.1920.1019/1920.0.1080.1890@0.0.1920.1019" timestamp="1592787797612" />
+    <state x="560" y="94" key="CommitChangelistDialog2/0.0.1920.1019@0.0.1920.1019" timestamp="1593998913917" />
+    <state x="184" y="84" key="DiffContextDialog" timestamp="1593998790582">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="184" y="84" key="DiffContextDialog/0.0.1920.1019@0.0.1920.1019" timestamp="1593998790582" />
+    <state x="740" y="199" key="FileChooserDialogImpl" timestamp="1591405207306">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="740" y="199" key="FileChooserDialogImpl/0.0.1920.1019@0.0.1920.1019" timestamp="1591405207306" />
+    <state width="1877" height="274" key="GridCell.Tab.0.bottom" timestamp="1593770816038">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state width="1877" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1019@0.0.1920.1019" timestamp="1593770816038" />
+    <state width="1877" height="274" key="GridCell.Tab.0.center" timestamp="1593770816038">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state width="1877" height="274" key="GridCell.Tab.0.center/0.0.1920.1019@0.0.1920.1019" timestamp="1593770816038" />
+    <state width="1877" height="274" key="GridCell.Tab.0.left" timestamp="1593770816038">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state width="1877" height="274" key="GridCell.Tab.0.left/0.0.1920.1019@0.0.1920.1019" timestamp="1593770816038" />
+    <state width="1877" height="274" key="GridCell.Tab.0.right" timestamp="1593770816038">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state width="1877" height="274" key="GridCell.Tab.0.right/0.0.1920.1019@0.0.1920.1019" timestamp="1593770816038" />
+    <state x="490" y="164" key="Maven.ArtifactSearchDialog" timestamp="1593998367087">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="490" y="164" key="Maven.ArtifactSearchDialog/0.0.1920.1019@0.0.1920.1019" timestamp="1593998367087" />
+    <state x="600" y="213" key="NewModule_or_Project.wizard" timestamp="1591405213976">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="600" y="213" key="NewModule_or_Project.wizard/0.0.1920.1019@0.0.1920.1019" timestamp="1591405213976" />
+    <state x="781" y="211" key="RollbackChangesDialog" timestamp="1593998791103">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="781" y="211" key="RollbackChangesDialog/0.0.1920.1019@0.0.1920.1019" timestamp="1593998791103" />
+    <state x="440" y="84" key="SettingsEditor" timestamp="1593998620915">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="440" y="84" key="SettingsEditor/0.0.1920.1019@0.0.1920.1019" timestamp="1593998620915" />
+    <state x="552" y="242" key="Vcs.Push.Dialog.v2" timestamp="1593998916617">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="552" y="242" key="Vcs.Push.Dialog.v2/0.0.1920.1019/1920.0.1080.1890@0.0.1920.1019" timestamp="1592787801546" />
+    <state x="552" y="242" key="Vcs.Push.Dialog.v2/0.0.1920.1019@0.0.1920.1019" timestamp="1593998916617" />
+    <state x="418" y="107" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1593770119249">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="418" y="107" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1019@0.0.1920.1019" timestamp="1593770119249" />
+    <state x="662" y="217" width="728" height="594" key="find.popup" timestamp="1593488306453">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="662" y="217" width="728" height="594" key="find.popup/0.0.1920.1019@0.0.1920.1019" timestamp="1593488306453" />
+    <state x="616" y="162" width="672" height="676" key="search.everywhere.popup" timestamp="1593770072124">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="616" y="162" width="672" height="676" key="search.everywhere.popup/0.0.1920.1019/1920.0.1080.1890@0.0.1920.1019" timestamp="1589967946712" />
+    <state x="616" y="162" width="672" height="676" key="search.everywhere.popup/0.0.1920.1019@0.0.1920.1019" timestamp="1593770072124" />
+  </component>
+</project>
