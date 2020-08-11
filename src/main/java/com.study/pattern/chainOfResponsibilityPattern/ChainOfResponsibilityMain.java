@@ -17,11 +17,12 @@ public class ChainOfResponsibilityMain {
         //设置响应信息
         response.setResponse("response:");
         //FilterChain,过滤规则形成的拦截链条
-        FilterChain fc=new FilterChain();
+        FilterChain fc = new FilterChain();
+
         //规则链条添加过滤规则，采用的是链式调用
         fc.addFilter(new HTMLFilter())
-                .addFilter(new SensitiveFilter())
-                .addFilter(new FaceFilter());
+          .addFilter(new SensitiveFilter())
+          .addFilter(new FaceFilter());
         //按照FilterChain的规则顺序，依次应用过滤规则
         fc.doFilter(request, response,fc);
         //打印请求信息

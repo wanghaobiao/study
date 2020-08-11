@@ -2,6 +2,7 @@ package com.study.pattern.decoratorPattern;
 
 public class ManDecoratorA extends Decorator {
 
+    @Override
     public void eat() {
         super.eat();
         reEat();

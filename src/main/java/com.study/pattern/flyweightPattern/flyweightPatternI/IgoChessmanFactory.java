@@ -23,6 +23,6 @@ public  class IgoChessmanFactory {
 
     //通过key来获取存储在Hashtable中的享元对象
     public static IgoChessman getIgoChessman(String color) {
-        return (IgoChessman)ht.get(color);
+        return (IgoChessman) ht.get(color);
     }
 }

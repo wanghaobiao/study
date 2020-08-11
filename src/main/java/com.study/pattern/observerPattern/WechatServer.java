@@ -27,8 +27,9 @@ public class WechatServer implements Observerable {
 
     @Override
     public void removeObserver(Observer o) {
-        if(!list.isEmpty())
+        if(!list.isEmpty()) {
             list.remove(o);
+        }
     }
 
     //遍历

@@ -8,6 +8,7 @@ public abstract class Decorator implements Person {
         this.person = person;
     }
 
+    @Override
     public void eat() {
         person.eat();
     }

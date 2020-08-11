@@ -3,7 +3,8 @@ package com.study.pattern.chainOfResponsibilityPattern;
 //处理字符串中的HTML标记
 public class HTMLFilter implements Filter {
 
-    public void doFilter(Request request, Response response,FilterChain chain) {
+    @Override
+    public void doFilter(Request request, Response response, FilterChain chain) {
         //将字符串中出现的"<>"符号替换成"[]"
         request.requestStr=request.requestStr
                 .replace('<', '[').replace('>', ']')+

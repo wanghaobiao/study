@@ -1,4 +1,6 @@
 package com.study.pattern.observerPattern;
+
+
 /*
 *
 * 观察者模式

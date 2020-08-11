@@ -38,18 +38,18 @@ public class  Folder {
         System.out.println("****对文件夹'" + name + "'进行杀毒");  //模拟杀毒
 
         //如果是Folder类型的成员，递归调用Folder的killVirus()方法
-        for(Object obj : folderList) {
-            ((Folder)obj).killVirus();
+        for(Folder obj : folderList) {
+            obj.killVirus();
         }
 
         //如果是ImageFile类型的成员，调用ImageFile的killVirus()方法
-        for(Object obj : imageList) {
-            ((ImageFile)obj).killVirus();
+        for(ImageFile obj : imageList) {
+            obj.killVirus();
         }
 
         //如果是TextFile类型的成员，调用TextFile的killVirus()方法
-        for(Object obj : textList) {
-            ((TextFile)obj).killVirus();
+        for(TextFile obj : textList) {
+            obj.killVirus();
         }
     }
 }

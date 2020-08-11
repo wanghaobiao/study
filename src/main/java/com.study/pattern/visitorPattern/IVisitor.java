@@ -1,4 +1,4 @@
-package com.study.pattern.visitorPattern.visitorPattern;
+package com.study.pattern.visitorPattern;
 
 public interface IVisitor {
     public void visit(ConcreteElement1 el1);

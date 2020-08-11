@@ -1,4 +1,4 @@
-package com.study.pattern.visitorPattern.visitorPattern;
+package com.study.pattern.visitorPattern;
 
 public class Visitor implements IVisitor {
 

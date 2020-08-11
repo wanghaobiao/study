@@ -1,6 +1,7 @@
-package com.study.pattern.visitorPattern.visitorPattern;
+package com.study.pattern.visitorPattern;
 
 import java.util.List;
+
 /*
 *
 *

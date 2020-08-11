@@ -7,7 +7,7 @@ package com.study.pattern.flyweightPattern.flyweightPatternII;
 * */
 public class FlyweightMain {
     public static void main(String[] args) {
-        String yundong ="足球";
+        String yundong = "足球";
         for(int i = 1;i <= 5;i++){
             if(i == 2){
                 yundong = "篮球";

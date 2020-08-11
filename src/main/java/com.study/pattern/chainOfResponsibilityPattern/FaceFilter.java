@@ -3,6 +3,7 @@ package com.study.pattern.chainOfResponsibilityPattern;
 //定义FaceFilter
 public class FaceFilter implements Filter {
 
+    @Override
     public void doFilter(Request request, Response response, FilterChain chain) {
 
         //将字符串中出现的":):"转换成"^V^";
