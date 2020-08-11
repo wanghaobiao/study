@@ -2,10 +2,6 @@ package com.study.pattern.visitorPattern;
 
 import java.util.List;
 
-/*
-*
-*
-* */
 public class VisitorMain {
     public static void main(String[] args){
         List<Element> list = ObjectStruture.getList();
@@ -13,6 +9,5 @@ public class VisitorMain {
             e.accept(new Visitor());
         }
     }
-
 }
 

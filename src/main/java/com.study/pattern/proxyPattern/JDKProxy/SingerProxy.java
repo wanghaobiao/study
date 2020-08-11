@@ -9,10 +9,20 @@ public class SingerProxy implements ISinger{
     public SingerProxy(ISinger target){
         this.target=target;
     }
+
     // 对目标对象的sing方法进行功能扩展
+
+    @Override
     public void sing() {
-        System.out.println("向观众问好");
+        System.out.println("向观众问好1");
         target.sing();
+        System.out.println("谢谢大家");
+    }
+
+    @Override
+    public void dancing() {
+        System.out.println("向观众问好2");
+        target.dancing();
         System.out.println("谢谢大家");
     }
 }

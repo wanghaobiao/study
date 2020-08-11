@@ -20,6 +20,6 @@ public class JDKProxyMain {
                         return returnValue;
                     }
                 });
-        proxy.sing();
+        proxy.dancing();
     }
 }

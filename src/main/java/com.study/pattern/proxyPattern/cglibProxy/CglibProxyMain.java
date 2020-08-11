@@ -13,6 +13,6 @@ public class CglibProxyMain {
         //代理对象
         Singer proxy = (Singer)new ProxyFactory(target).getProxyInstance();
         //执行代理对象的方法
-        proxy.sing();
+        proxy.dancing();
     }
 }

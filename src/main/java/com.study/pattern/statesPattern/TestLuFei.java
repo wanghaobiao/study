@@ -3,13 +3,13 @@ package com.study.pattern.statesPattern;
 public class TestLuFei {
     public static void main(String[] args) {
         LuFei luFei = new LuFei();
-        luFei.setstate(luFei.SECONDGEAR);
+        luFei.setstate( LuFei.SecondGear );
         luFei.change();
-        luFei.setstate(luFei.THIRDGEAR);
+        luFei.setstate( LuFei.ThirdGear );
         luFei.change();
-        luFei.setstate(luFei.FOURTHGEAR);
+        luFei.setstate( LuFei.FourthGear );
         luFei.change();
-        luFei.setstate(luFei.ORDINARY);
+        luFei.setstate( LuFei.Ordinary );
         luFei.change();
     }
 }

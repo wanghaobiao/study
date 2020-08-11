@@ -8,9 +8,9 @@ public class SingletonIIIIIII {
     public static SingletonIIIIIII getSingleton() {
         if (singleton == null) {
             synchronized (SingletonIIIIIII.class) {
-            if (singleton == null) {
-                    singleton = new SingletonIIIIIII();
-            }
+                if (singleton == null) {
+                        singleton = new SingletonIIIIIII();
+                }
             }
         }
         return singleton;
