@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
-    <facet type="Spring" name="Spring">
-      <configuration />
-    </facet>
-    <facet type="jpa" name="JPA">
-      <configuration>
-        <setting name="validation-enabled" value="true" />
-        <setting name="provider-name" value="Hibernate" />
-        <datasource-mapping>
-          <factory-entry name="entityManagerFactory" />
-        </datasource-mapping>
-        <naming-strategy-map />
-      </configuration>
-    </facet>
-    <facet type="web" name="Web">
-      <configuration>
-        <webroots />
-      </configuration>
-    </facet>
     <facet type="JRebel" name="JRebel">
       <configuration>
         <option name="ideModuleStorage">
@@ -28,11 +10,27 @@
             <entry key="com.zeroturnaround.jrebel.remoting.ModuleRemoteServerSelection" value="off" />
             <entry key="com.zeroturnaround.jrebel.remoting.ModuleSpecificSingleRemoteServer" />
             <entry key="jrebelEnabled" value="true" />
-            <entry key="lastExternalPluginCheckTime" value="1597021919355" />
-            <entry key="savedRebelXmlBuildTool" />
-            <entry key="savedRebelXmlContent" />
+            <entry key="lastExternalPluginCheckTime" value="1598948256619" />
           </map>
         </option>
+      </configuration>
+    </facet>
+    <facet type="jpa" name="JPA">
+      <configuration>
+        <setting name="validation-enabled" value="true" />
+        <setting name="provider-name" value="Hibernate" />
+        <datasource-mapping>
+          <factory-entry name="study" />
+        </datasource-mapping>
+        <naming-strategy-map />
+      </configuration>
+    </facet>
+    <facet type="Spring" name="Spring">
+      <configuration />
+    </facet>
+    <facet type="web" name="Web">
+      <configuration>
+        <webroots />
       </configuration>
     </facet>
   </component>
