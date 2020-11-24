@@ -81,7 +81,7 @@ public class LcFreemarkerUtil {
 
     public static void main(String[] args) {
         try {
-            LcFreemarkerUtil.buildFile( new FreemarkerEntity( 14 ) );
+            LcFreemarkerUtil.buildFile( new FreemarkerEntity( 18 ) );
         } catch (IOException e) {
             e.printStackTrace();
         }
