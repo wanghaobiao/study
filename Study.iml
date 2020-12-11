@@ -10,7 +10,7 @@
             <entry key="com.zeroturnaround.jrebel.remoting.ModuleRemoteServerSelection" value="off" />
             <entry key="com.zeroturnaround.jrebel.remoting.ModuleSpecificSingleRemoteServer" />
             <entry key="jrebelEnabled" value="true" />
-            <entry key="lastExternalPluginCheckTime" value="1604365504091" />
+            <entry key="lastExternalPluginCheckTime" value="1606959642099" />
           </map>
         </option>
       </configuration>
