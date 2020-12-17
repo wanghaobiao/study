@@ -45,7 +45,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="basis" />
+    <orderEntry type="module" module-name="基础" />
     <orderEntry type="library" name="Maven: cn.hutool:hutool-all:5.4.0" level="project" />
     <orderEntry type="library" name="Maven: commons-io:commons-io:1.3.2" level="project" />
     <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.23" level="project" />

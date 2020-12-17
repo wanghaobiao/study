@@ -25,10 +25,9 @@ public class LcFreemarkerUtil {
     public static void buildFile(FreemarkerEntity entity)throws IOException {
         Integer index = entity.getIndex();
         String targetPath = "E:\\SpringCloud\\study\\src\\main\\java\\com.study\\leetcode\\" + "lc_" + index ;
-
         // 模板生成后新文件名
         String fileName = "Solution.java";
-        // 创建文件夹
+        // CrcreateFoldercreateFolder
         new File(targetPath).mkdirs();
         File nFile = new File(targetPath +"/"+ fileName);
         if (nFile.exists()) {
@@ -81,7 +80,7 @@ public class LcFreemarkerUtil {
 
     public static void main(String[] args) {
         try {
-            LcFreemarkerUtil.buildFile( new FreemarkerEntity( 19 ) );
+            LcFreemarkerUtil.buildFile( new FreemarkerEntity( 26 ) );
         } catch (IOException e) {
             e.printStackTrace();
         }
