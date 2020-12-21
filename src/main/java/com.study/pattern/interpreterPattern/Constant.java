@@ -1,5 +1,7 @@
 package com.study.pattern.interpreterPattern;
-
+/**
+ * 这个比较特殊 就是定义一个布尔值
+ */
 public class Constant extends Expression{
 
     private boolean value;

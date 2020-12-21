@@ -1,4 +1,4 @@
-package com.study.pattern.Singleton;
+package com.study.pattern.singleton;
 //懒汉，线程安全
 public class SingletonII {
 

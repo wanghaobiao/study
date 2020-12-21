@@ -1,4 +1,4 @@
-package com.study.pattern.Singleton;
+package com.study.pattern.singleton;
 //静态内部类
 public class SingletonIIIII {
     private static class SingletonHolder {

@@ -1,4 +1,4 @@
-package com.study.multiThread.blocingQueue;
+package com.study.basics.multiThread.blocingQueue;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;

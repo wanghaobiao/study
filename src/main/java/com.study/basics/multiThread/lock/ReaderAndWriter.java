@@ -1,4 +1,4 @@
-package com.study.multiThread.lock;
+package com.study.basics.multiThread.lock;
 
 import java.util.HashMap;
 import java.util.Map;

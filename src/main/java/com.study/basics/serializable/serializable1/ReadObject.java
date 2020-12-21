@@ -8,8 +8,9 @@ import java.io.ObjectInputStream;
  */
 public class ReadObject {
     public static void main(String[] args) {
-        try (//创建一个ObjectInputStream输入流
-             ObjectInputStream ois = new ObjectInputStream(new FileInputStream("object.txt"))) {
+        try (
+            //创建一个ObjectInputStream输入流
+            ObjectInputStream ois = new ObjectInputStream(new FileInputStream("object.txt"))) {
             Person brady = (Person) ois.readObject();
             System.out.println(brady);
         } catch (Exception e) {

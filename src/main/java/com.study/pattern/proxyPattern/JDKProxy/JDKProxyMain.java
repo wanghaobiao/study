@@ -19,6 +19,7 @@ public class JDKProxyMain {
                         System.out.println("谢谢大家");
                         return returnValue;
                     }
+
                 });
         proxy.dancing();
     }

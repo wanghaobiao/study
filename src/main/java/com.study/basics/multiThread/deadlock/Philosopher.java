@@ -1,6 +1,4 @@
-package com.study.multiThread.deadlock;
-
-import com.sun.org.apache.bcel.internal.generic.NEW;
+package com.study.basics.multiThread.deadlock;
 
 import java.util.concurrent.Semaphore;
 

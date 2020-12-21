@@ -12,7 +12,7 @@ public class Person implements Serializable {
     private Map<String, Object> temp ;
 
 
-    //我不提供无参构造器
+    //不提供无参构造器
     public Person(String name, int age,Map<String, Object> temp ) {
         this.name = name;
         this.age = age;

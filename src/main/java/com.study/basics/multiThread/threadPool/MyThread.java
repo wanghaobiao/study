@@ -1,4 +1,4 @@
-package com.study.multiThread.threadPool;
+package com.study.basics.multiThread.threadPool;
 
 
 public class MyThread extends Thread {

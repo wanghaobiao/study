@@ -1,4 +1,4 @@
-package com.study.pattern.Singleton;
+package com.study.pattern.singleton;
 //枚举
 public enum SingletonIIIIII {
     INSTANCE;

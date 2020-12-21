@@ -1,4 +1,4 @@
-package com.study.pattern.Singleton;
+package com.study.pattern.singleton;
 
 public class SingletonIIIIIII {
     private volatile static SingletonIIIIIII singleton;

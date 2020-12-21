@@ -24,6 +24,9 @@ public class TwoNumGeneric<T,X> {
     }
 
 
+    /**
+     * 两个泛型
+     */
     public static void main(String[] args) {
         TwoNumGeneric<String,Integer> txTwoNumGeneric = new TwoNumGeneric<>();
     }

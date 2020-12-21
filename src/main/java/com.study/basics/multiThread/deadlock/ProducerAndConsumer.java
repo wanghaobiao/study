@@ -1,4 +1,4 @@
-package com.study.multiThread.deadlock;
+package com.study.basics.multiThread.deadlock;
 /**
  * wait()   notify()
  */

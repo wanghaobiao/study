@@ -1,4 +1,4 @@
-package com.study.multiThread.threadPool;
+package com.study.basics.multiThread.threadPool;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;

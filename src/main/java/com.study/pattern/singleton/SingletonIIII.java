@@ -1,4 +1,4 @@
-package com.study.pattern.Singleton;
+package com.study.pattern.singleton;
 //饿汉，变种
 public class SingletonIIII {
     private static SingletonIIII instance = null;

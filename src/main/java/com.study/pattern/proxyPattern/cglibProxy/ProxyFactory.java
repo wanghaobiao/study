@@ -48,10 +48,11 @@ public class ProxyFactory implements MethodInterceptor {
      */
     @Override
     public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable {
-        System.out.println("向观众问好11");
+        System.out.println("这个是代理方法开始");
+        args[0] = "2456";
         //执行目标对象的方法
         Object returnValue = method.invoke(target, args);
-        System.out.println("谢谢大家");
+        System.out.println("这个是代理方法结束");
         return returnValue;
     }
 }

@@ -6,13 +6,13 @@ public class Caretaker {
     /**
      * 备忘录取值方法
      */
-    public MementoIF retrieveMemento(){
+    public MementoIF getMemento(){
         return memento;
     }
     /**
      * 备忘录赋值方法
      */
-    public void saveMemento(MementoIF memento){
+    public void setMemento(MementoIF memento){
         this.memento = memento;
     }
 }

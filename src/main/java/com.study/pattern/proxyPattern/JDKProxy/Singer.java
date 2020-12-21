@@ -11,4 +11,8 @@ public class Singer implements ISinger{
     public void dancing(){
         System.out.println("跳一支舞");
     }
+    @Override
+    public void params(String str){
+        System.out.println("带参数"+str);
+    }
 }

@@ -9,10 +9,10 @@ import com.study.pattern.proxyPattern.JDKProxy.Singer;
 public class CglibProxyMain {
     public static void main(String[] args){
         //目标对象
-        Singer target = new Singer();
+        Singer singer = new Singer();
         //代理对象
-        Singer proxy = (Singer)new ProxyFactory(target).getProxyInstance();
+        Singer proxy = (Singer)new ProxyFactory(singer).getProxyInstance();
         //执行代理对象的方法
-        proxy.dancing();
+        proxy.params("123");
     }
 }

@@ -1,8 +1,6 @@
-package com.study.multiThread.thread;
+package com.study.basics.multiThread.thread;
 
-import java.util.concurrent.ThreadPoolExecutor;
-
-public class Thread1 {
+public class ThreadI {
     /*thread.Join把指定的线程加入到当前线程，可以将两个交替执行的线程合并为顺序执行的线程。
     比如在线程B中调用了线程A的Join()方法，直到线程A执行完毕后，才会继续执行线程B。
     想要更深入了解，建议看一下join的源码，也很简单的，使用wait方法实现的。

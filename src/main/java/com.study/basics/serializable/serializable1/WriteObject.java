@@ -10,7 +10,8 @@ import java.util.Map;
  */
 public class WriteObject {
     public static void main(String[] args) {
-        try (//创建一个ObjectOutputStream输出流
+        try (
+            //创建一个ObjectOutputStream输出流
             ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("object.txt"))) {
             Map<String, Object> temp = new HashMap<>();
             temp.put("xxx",123);

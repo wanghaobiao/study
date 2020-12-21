@@ -1,6 +1,6 @@
-package com.study.multiThread.synchronized2;
+package com.study.basics.multiThread.synchronizedI;
 
-public class Synchronized2 {
+public class SynchronizedI {
     /*private void method02(){
         synchronized (this){}
     }

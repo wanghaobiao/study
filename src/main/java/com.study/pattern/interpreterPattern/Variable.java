@@ -1,5 +1,7 @@
 package com.study.pattern.interpreterPattern;
-
+/**
+ * 这个定义
+ */
 public class Variable extends Expression {
 
     private String name;

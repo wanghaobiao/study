@@ -1,4 +1,4 @@
-package com.study.pattern.Singleton;
+package com.study.pattern.singleton;
 //懒汉，线程不安全
 public class SingletonI {
     private static SingletonI instance;

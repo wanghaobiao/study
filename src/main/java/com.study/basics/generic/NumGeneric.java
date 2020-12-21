@@ -11,6 +11,9 @@ public class NumGeneric <C> {
         this.num = num;
     }
 
+    /**
+     * 定义在类上  初始化的时候  定义泛型类型
+     */
     public static void main(String[] args) {
         NumGeneric<Integer> intNum = new NumGeneric<>();
         intNum.setNum( 10 );

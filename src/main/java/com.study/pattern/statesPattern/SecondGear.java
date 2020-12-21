@@ -4,7 +4,7 @@ public class SecondGear implements LuFeiState{
 
     @Override
     public void change() {
-        System.out.println("路飞开启三挡战斗");
+        System.out.println("路飞开启二挡战斗");
     }
 
 }
