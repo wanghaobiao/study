@@ -1,14 +1,19 @@
 package com.study.basics.multiThread.thread;
-
+/**
+ * thread.Join  用法
+ */
 public class ThreadI {
-    /*thread.Join把指定的线程加入到当前线程，可以将两个交替执行的线程合并为顺序执行的线程。
-    比如在线程B中调用了线程A的Join()方法，直到线程A执行完毕后，才会继续执行线程B。
-    想要更深入了解，建议看一下join的源码，也很简单的，使用wait方法实现的。
-    t.join(); //调用join方法，等待线程t执行完毕
-    t.join(1000); //等待 t 线程，等待时间是1000毫秒。*/
+    /**
+     * thread.Join 的用法
+     * 把指定的线程加入到当前线程，可以将两个交替执行的线程合并为顺序执行的线程。
+     * 比如在线程B中调用了线程A的Join()方法，直到线程A执行完毕后，才会继续执行线程B。
+     * 想要更深入了解，建议看一下join的源码，也很简单的，使用wait方法实现的。
+     * t.join(); //调用join方法，等待线程t执行完毕
+     * t.join(1000); //等待 t 线程，等待时间是1000毫秒。
+     */
     public static void main(String[] args) {
-        //method01();
-        method02();
+        method01();
+        //method02();
     }
 
     /**
@@ -30,6 +35,7 @@ public class ThreadI {
         Thread t2 = new Thread( () -> {
             try {
                 Thread.sleep(2000);
+                //表示等待线程1执行后,执行
                 t1.join();
                 System.out.println(i++);
                 System.out.println( "t2 is ing" );
@@ -41,6 +47,7 @@ public class ThreadI {
         Thread t3 = new Thread( () -> {
             try {
                 Thread.sleep(3000);
+                //表示等待线程2执行后,执行
                 t2.join();
                 System.out.println(i++);
                 System.out.println( "t3 is ing" );
