@@ -20,5 +20,58 @@ public class ThreadIIII {
      * 它还会留在锁池中，唯有线程再次调用 wait()方法，它才会重新回到等待池中。
      * 而竞争到对象锁的线程则继续往下执行，直到执行完了 synchronized 代码块，它会释放掉该对象锁，这时锁池中的线程会继续竞争该对象锁。
      */
+    private static Object obj = new Object();
+
+    public static void main(String[] args) {
+
+        //测试 Thread1 wait()
+        Thread t1 = new Thread( () -> {
+            System.out.println("Thread1 开始执行");
+            synchronized (obj) {
+                System.out.println("Thread1 抢到了锁");
+                try {
+                    obj.wait();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("Thread1被唤醒了拿到了锁");
+            }
+        });
+        Thread t2 = new Thread( () -> {
+            System.out.println("Thread2  开始执行");
+            System.out.println("Thread2  睡眠3秒...");
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            synchronized (obj) {
+                System.out.println("Thread2 抢到了锁");
+                System.out.println("Thread2 notify");
+                obj.notify();
+            }
+        });
+
+        //Thread2 notify()
+        Thread t3 = new Thread( () -> {
+            System.out.println("Thread3 开始执行");
+            System.out.println("Thread3  睡眠3秒...");
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            synchronized (obj) {
+                System.out.println("Thread3 抢到了锁");
+                System.out.println("notifyAll obj on Thread3");
+                obj.notifyAll();
+            }
+        });
+        t1.start();
+        t2.start();
+        t3.start();
+    }
 
 }
+
+
