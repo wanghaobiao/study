@@ -1,4 +1,4 @@
-package com.study.basics.serializable.serializable1;
+package com.study.basics.serializable.serializableI;
 
 import java.io.Serializable;
 import java.util.Map;

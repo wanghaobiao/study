@@ -1,4 +1,4 @@
-package com.study.basics.serializable.serializable1;
+package com.study.basics.serializable.serializableI;
 
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
