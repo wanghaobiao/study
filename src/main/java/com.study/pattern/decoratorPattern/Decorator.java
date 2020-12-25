@@ -10,6 +10,7 @@ public abstract class Decorator implements Person {
 
     @Override
     public void eat() {
+        System.out.println("医生这个角色在吃");
         person.eat();
     }
 }

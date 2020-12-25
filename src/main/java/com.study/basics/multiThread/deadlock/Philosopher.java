@@ -3,11 +3,12 @@ package com.study.basics.multiThread.deadlock;
 import java.util.concurrent.Semaphore;
 
 public class Philosopher extends Thread {
+    public static final Semaphore SIGANL = new Semaphore( 4 );
 
     //1...思考问题
     public int index;
-    public Fork[] forks;
-    public Philosopher(int index,Fork[] forks){
+    public Object[] forks;
+    public Philosopher(int index,Object[] forks){
         this.index = index;
         this.forks = forks;
     }
@@ -15,7 +16,7 @@ public class Philosopher extends Thread {
     public void run() {
         while (true) {
             try {
-                Siganl.SIGANL.acquire();
+                SIGANL.acquire();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -29,12 +30,12 @@ public class Philosopher extends Thread {
                 System.out.println( index + "号暂学家放下右叉子......");
             }
             System.out.println( index + "号哲学家放下左叉子..." );
-            Siganl.SIGANL.release();
+            SIGANL.release();
         }
     }
 
     public static void main(String[] args) {
-        Fork[] forks = new Fork[]{new Fork(),new Fork(),new Fork(),new Fork(),new Fork()};
+        Object[] forks = new Object[]{new Object(),new Object(),new Object(),new Object(),new Object()};
         Philosopher p0 = new Philosopher( 0, forks);
         Philosopher p1 = new Philosopher( 1, forks);
         Philosopher p2 = new Philosopher( 2, forks);
@@ -48,10 +49,4 @@ public class Philosopher extends Thread {
 
     }
 }
-class Siganl{
-    public static final Semaphore SIGANL = new Semaphore( 4 );
 
-}
-class Fork{
-
-}

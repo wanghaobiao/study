@@ -1,7 +1,7 @@
 package com.study.pattern.flyweightPattern.flyweightPatternI;
 
 public class Client {
-    public static void main1(String args[]) {
+    public static void main(String args[]) {
         IgoChessman black1,black2,black3,white1,white2;
 
         //通过享元工厂获取三颗黑子
@@ -22,7 +22,7 @@ public class Client {
         white1.display();
         white2.display();
     }
-    public static void main(String args[]) {
+    public static void main1(String args[]) {
         IgoChessman black1,black2,black3,white1,white2;
 
         //通过享元工厂获取三颗黑子

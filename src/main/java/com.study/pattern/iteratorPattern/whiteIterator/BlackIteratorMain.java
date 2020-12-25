@@ -36,21 +36,25 @@ public class BlackIteratorMain {
         set.add("set2");
         set.add("set3");
         set.add("set4");
+
+        //迭代器 可以不分容器类型
+
         //使用迭代器遍历ArrayList集合
         java.util.Iterator listIt = list.iterator();
         while(listIt.hasNext()){
-            System.out.println(listIt.hasNext());
-        }
-        //使用迭代器遍历Set集合
-        java.util.Iterator setIt = set.iterator();
-        while(setIt.hasNext()){
-            System.out.println(listIt.hasNext());
+            System.out.println(listIt.next());
         }
         //使用迭代器遍历LinkedList集合
         java.util.Iterator linkIt = linkList.iterator();
         while(linkIt.hasNext()){
-            System.out.println(listIt.hasNext());
+            System.out.println(linkIt.next());
         }
+        //使用迭代器遍历Set集合
+        java.util.Iterator setIt = set.iterator();
+        while(setIt.hasNext()){
+            System.out.println(setIt.next());
+        }
+
 
     }
 

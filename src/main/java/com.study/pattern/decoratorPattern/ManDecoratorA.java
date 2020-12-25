@@ -4,9 +4,9 @@ public class ManDecoratorA extends Decorator {
 
     @Override
     public void eat() {
+        System.out.println("医生A这个角色在吃");
         super.eat();
         reEat();
-        System.out.println("ManDecoratorA类");
     }
 
     public void reEat() {
