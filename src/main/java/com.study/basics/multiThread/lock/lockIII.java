@@ -10,9 +10,28 @@ public class lockIII {
     private Lock lock = new ReentrantLock();
     public static void main(String[] args)  {
         lockIII lockIII = new lockIII();
-        MyThread thread1 = new MyThread(lockIII);
-        MyThread thread2 = new MyThread(lockIII);
+
+        Thread thread1 = new Thread(){
+            @Override
+            public void run() {
+                try {
+                    lockIII.insert(Thread.currentThread());
+                } catch (InterruptedException e) {
+                    System.out.println(Thread.currentThread().getName()+"被中断");
+                }
+            };
+        };
         thread1.start();
+        Thread thread2 = new Thread(){
+            @Override
+            public void run() {
+                try {
+                    lockIII.insert(Thread.currentThread());
+                } catch (InterruptedException e) {
+                    System.out.println(Thread.currentThread().getName()+"被中断");
+                }
+            };
+        };
         thread2.start();
 
         try {
@@ -24,7 +43,8 @@ public class lockIII {
     }
 
     public void insert(Thread thread) throws InterruptedException{
-        lock.lockInterruptibly();   //注意，如果需要正确中断等待锁的线程，必须将获取锁放在外面，然后将InterruptedException抛出
+        //注意，如果需要正确中断等待锁的线程，必须将获取锁放在外面，然后将InterruptedException抛出
+        lock.lockInterruptibly();
         try {
             System.out.println(thread.getName()+"得到了锁");
             long startTime = System.currentTimeMillis();
@@ -43,19 +63,3 @@ public class lockIII {
     }
 }
 
-class MyThread extends Thread {
-    private lockIII lockIII = null;
-    public MyThread(lockIII test) {
-        this.lockIII = test;
-
-    }
-    @Override
-    public void run() {
-
-        try {
-            lockIII.insert(Thread.currentThread());
-        } catch (InterruptedException e) {
-            System.out.println(Thread.currentThread().getName()+"被中断");
-        }
-    }
-}
