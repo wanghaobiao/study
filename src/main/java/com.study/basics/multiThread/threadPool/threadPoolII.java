@@ -24,7 +24,7 @@ public class threadPoolII {
                 public void run() {
                     try {
                         System.out.println( "第" + index + "个线程" + Thread.currentThread().getName() );
-                        Thread.sleep( 1000 );
+                        Thread.sleep( 10000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
