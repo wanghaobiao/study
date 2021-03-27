@@ -1,4 +1,9 @@
 package com.study.basics.multiThread.thread;
+
+import com.server.basis.util.DateUtil;
+
+import java.util.Date;
+
 /**
  * thread.Join  用法
  */
@@ -21,45 +26,61 @@ public class ThreadI {
      */
     static Integer i = 0;
     private static void method01() {
-
+        Date startDate1 = new Date();
         Thread t1 = new Thread( () -> {
-            try {
-                Thread.sleep(1000);
-                System.out.println(i++);
-                System.out.println( "t1 is ing" );
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            System.out.println( "t1 is finished" );
-        } );
-        Thread t2 = new Thread( () -> {
+            Date startDate = new Date();
+            System.out.println( "t1 is 开始 时间" + DateUtil.toString( startDate,DateUtil.DATE_LONG ) );
             try {
                 Thread.sleep(2000);
+                System.out.println(i++);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println( "t1 is 完成" );
+            System.out.println("=================>t1共耗时"+(System.currentTimeMillis()  - startDate.getTime())+"毫秒");
+        } );
+        Thread t2 = new Thread( () -> {
+            Date startDate = new Date();
+            System.out.println( "t2 is 开始 时间" + DateUtil.toString( startDate,DateUtil.DATE_LONG ) );
+            try {
+                Thread.sleep(4000);
+                System.out.println(i++);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println( "t2 is 完成" );
+            System.out.println("=================>t2共耗时"+(System.currentTimeMillis()  - startDate.getTime())+"毫秒");
+        } );
+        /*Thread t3 = new Thread( () -> {
+            Date startDate = new Date();
+            System.out.println( "t3 is 开始 时间" + DateUtil.toString( startDate,DateUtil.DATE_LONG ) );
+            try {
                 //表示等待线程1执行后,执行
                 t1.join();
-                System.out.println(i++);
-                System.out.println( "t2 is ing" );
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            System.out.println( "t2 is finished" );
-        } );
-        Thread t3 = new Thread( () -> {
-            try {
-                Thread.sleep(3000);
                 //表示等待线程2执行后,执行
                 t2.join();
+                Thread.sleep(3000);
                 System.out.println(i++);
-                System.out.println( "t3 is ing" );
+
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println( "t3 is finished" );
+            System.out.println( "t3 is 完成" );
+            System.out.println("=================>t2共耗时"+(System.currentTimeMillis()  - startDate.getTime())+"毫秒");
         } );
-
-        t3.start();
+        t3.start();*/
         t2.start();
         t1.start();
+        //表示等待线程1执行后,执行
+        try {
+            t1.join();
+            //表示等待线程2执行后,执行
+            t2.join();
+            System.out.println("=================>根节点共耗时"+(System.currentTimeMillis()  - startDate1.getTime())+"毫秒");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
     }
 
 
@@ -67,6 +88,7 @@ public class ThreadI {
      * 第二种实现方式，线程执行顺序可以在方法中调换
      */
     private static void method02() {
+        Date startDate = new Date();
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
@@ -83,5 +105,6 @@ public class ThreadI {
         //t2.join();
         t3.start();
         //t3.join();
+        System.out.println("=================>共耗时"+(System.currentTimeMillis()  - startDate.getTime())+"毫秒");
     }
 }
