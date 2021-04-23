@@ -14,14 +14,14 @@ public class ThreadII {
          * 所以并不需要等待另一个完成，
          * 所以他们的执行顺序应该是并行的
          */
-        thread1.start();
-        thread2.start();
+        //thread1.start();
+        //thread2.start();
         /**
          * 直接使用对象调用方法，
-         * 那必须是这个方法执行完了代码才能往下走啊
+         * 那必须是这个方法执行完了代码才能往下走
          */
-        //thread1.run();
-        //thread2.run();
+        thread1.run();
+        thread2.run();
     }
 
     public static void test() {
