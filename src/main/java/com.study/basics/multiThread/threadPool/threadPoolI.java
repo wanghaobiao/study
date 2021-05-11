@@ -18,6 +18,7 @@ public class threadPoolI {
 
         //可缓存的线程池，如果线程池的容量超过了任务数，自动回收空闲线程
         ExecutorService cacheThreadPool = Executors.newCachedThreadPool();
+        //ExecutorService cacheThreadPool =  Executors.newFixedThreadPool( 4 );
 
         //通过线程池创建
         for (int i = 1; i <= 3; i++) {

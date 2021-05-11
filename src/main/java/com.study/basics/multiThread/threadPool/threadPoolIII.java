@@ -24,6 +24,6 @@ public class threadPoolIII {
             public void run() {
                 System.out.println("延迟1秒后每三秒执行一次" + Thread.currentThread().getName() );
             }
-        },1,3,TimeUnit.SECONDS);
+        },1,2,TimeUnit.SECONDS);
     }
 }

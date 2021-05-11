@@ -12,12 +12,10 @@ public class SynchronizedII implements Runnable {
     }
     @Override
     public void run(){
-        for (int j =0 ; j<10000;j++){
             //increase();
             synchronized (this){
                 i++;
             }
-        }
     }
 
     public static void main(String[] args) throws InterruptedException {
