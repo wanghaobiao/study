@@ -24,7 +24,6 @@ public class threadPoolIIIII {
     public static void submit() {
         List<Future<String>> res = new ArrayList<>();
         Date startDate = new Date();
-
         ExecutorService executorService = Executors.newCachedThreadPool();
         for (int i = 0; i < 10; i++) {
             final int ind = i;
