@@ -9,7 +9,7 @@ public class ReflectionI extends ReflectionII{
 
 
     public static void main(String[] args) throws Exception {
-        Class<?> clazz = Class.forName("com.study.reflection.ReflectionI");
+        Class<?> clazz = Class.forName("com.study.basics.reflection.ReflectionI");
         System.out.println("===============本类属性===============");
         // 取得本类的全部属性
         Field[] field_self = clazz.getDeclaredFields();
@@ -28,10 +28,10 @@ public class ReflectionI extends ReflectionII{
         //两种实例化方法
         //ReflectionI reflectionI = new ReflectionI();
         ReflectionI reflectionI = (ReflectionI) clazz.newInstance();
-        method.invoke(reflectionI);
         // Java 反射机制 - 调用某个类的方法1.
-        // 调用TestReflect的reflect2方法
+        method.invoke(reflectionI);
         method = clazz.getMethod("reflect2", int.class, String.class);
+        // 调用TestReflect的reflect2方法
         method.invoke(clazz.newInstance(), 20, "张三");
         // Java 反射机制 - 调用某个类的方法2.
         // age -> 20. name -> 张三
@@ -43,6 +43,7 @@ public class ReflectionI extends ReflectionII{
         field.setAccessible(true);
         field.set(reflectionI, "2");
         System.out.println(field.get(reflectionI));
+        System.out.println( ReflectionI.ReflectionIId );
         // 可以直接对 对父类的对象操作属性赋值
         Field parentField = clazz.getField("ReflectionIIId");
         parentField.setAccessible(true);
