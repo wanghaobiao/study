@@ -8,14 +8,22 @@ public class SynchronizedII implements Runnable {
      * 如果不使用synchronized修饰(加锁)的话 就会出现线程安全问题  最后的结果可能小于 2000
      */
     public synchronized void increase(){
-        i++;
-    }
-    @Override
-    public void run(){
-            //increase();
+        for (int j = 0; j < 10000; j++) {
             synchronized (this){
                 i++;
             }
+        }
+    }
+    @Override
+    public void run(){
+        increase();
+        for (int j = 0; j < 10000; j++) {
+            synchronized (this){
+                i++;
+            }
+        }
+        System.out.println(i);
+
     }
 
     public static void main(String[] args) throws InterruptedException {
@@ -24,8 +32,8 @@ public class SynchronizedII implements Runnable {
         Thread t2 = new Thread(test);
         t1.start();
         t2.start();
-        t1.join();
-        t2.join();
+        /*t1.join();
+        t2.join();*/
         System.out.println(i);
     }
 }
