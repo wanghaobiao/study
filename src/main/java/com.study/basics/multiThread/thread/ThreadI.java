@@ -11,6 +11,19 @@ import java.util.List;
  * thread.Join  用法
  */
 public class ThreadI {
+    /**
+     * thread.Join 的用法
+     * 把指定的线程加入到当前线程，可以将两个交替执行的线程合并为顺序执行的线程。
+     * 比如在线程B中调用了线程A的Join()方法，直到线程A执行完毕后，才会继续执行线程B。
+     * 想要更深入了解，建议看一下join的源码，也很简单的，使用wait方法实现的。
+     * t.join(); //调用join方法，等待线程t执行完毕
+     * t.join(1000); //等待 t 线程，等待时间是1000毫秒。
+     */
+    public static void main(String[] args) throws InterruptedException {
+        method01();
+        //method02();
+    }
+
 
     /**
      * 第一种实现方式，顺序写死在线程代码的内部了，有时候不方便
@@ -37,6 +50,8 @@ public class ThreadI {
             Thread temp = list.get(i);
             temp.join();
         }
+        //加入  join  这句话在最后的方法执行之后才会执行
+        //不加入  join  的区别在于  这句话的打印  会执行
         System.out.println("=================>根节点共耗时"+(System.currentTimeMillis()  - startDate1.getTime())+"毫秒");
 
     }
@@ -96,17 +111,5 @@ public class ThreadI {
         System.out.println("=================>共耗时"+(System.currentTimeMillis()  - startMainDate.getTime())+"毫秒");
     }
 
-    /**
-     * thread.Join 的用法
-     * 把指定的线程加入到当前线程，可以将两个交替执行的线程合并为顺序执行的线程。
-     * 比如在线程B中调用了线程A的Join()方法，直到线程A执行完毕后，才会继续执行线程B。
-     * 想要更深入了解，建议看一下join的源码，也很简单的，使用wait方法实现的。
-     * t.join(); //调用join方法，等待线程t执行完毕
-     * t.join(1000); //等待 t 线程，等待时间是1000毫秒。
-     */
-    public static void main(String[] args) throws InterruptedException {
-        method01();
-        //method02();
-    }
 
 }

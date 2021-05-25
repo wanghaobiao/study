@@ -22,14 +22,12 @@ import java.util.concurrent.Semaphore;
  */
 public class ThreadIIIII  {
 
-
-
     public static void main(String[] args) throws InterruptedException, ExecutionException {
         Date startMainDate = new Date();
         System.out.println("main开始=============>"+ DateUtil.toString( startMainDate,DateUtil.DATE_LONG ) );
 
         //创建Callable的对象
-        FutureTask<String> ft1 = new FutureTask<String>(new Callable<String>(){
+        FutureTask<String> futureTask1 = new FutureTask<String>(new Callable<String>(){
             @Override
             public String call() throws Exception {   //重写Callable接口中的call()方法
                 Date startDate = new Date();
@@ -39,22 +37,22 @@ public class ThreadIIIII  {
                 return "cell1";
             }
         });
-        FutureTask<String> ft2 = new FutureTask<String>(new Callable<String>(){
-            @Override
-            public String call() throws Exception {   //重写Callable接口中的call()方法
-                Date startDate = new Date();
-                System.out.println("cell2开始=============>"+ DateUtil.toString( startDate,DateUtil.DATE_LONG ) );
-                Thread.sleep( 6000 );
-                System.out.println("cell2结束=============>共耗时"+(System.currentTimeMillis()  - startDate.getTime())+"毫秒");
-                return "cell2";
-            }
-        });
+
+
+        FutureTask<String> futureTask2 = new FutureTask<>( () -> {   //重写Callable接口中的call()方法
+            Date startDate = new Date();
+            System.out.println("cell2开始=============>"+ DateUtil.toString( startDate,DateUtil.DATE_LONG ) );
+            Thread.sleep( 6000 );
+            System.out.println("cell2结束=============>共耗时"+(System.currentTimeMillis()  - startDate.getTime())+"毫秒");
+            return "cell2";
+        } );
+
         List<FutureTask> list = new ArrayList<>();
-        list.add( ft1 );
-        list.add( ft2 );
+        list.add( futureTask1 );
+        list.add( futureTask2 );
         List<Thread> threadList = new ArrayList<>();
-        threadList.add( new Thread(ft1) );
-        threadList.add( new Thread(ft2) );
+        threadList.add( new Thread(futureTask1) );
+        threadList.add( new Thread(futureTask2) );
 
         for (int i = 0; i < threadList.size(); i++) {
             Thread temp = threadList.get(i);
@@ -67,6 +65,7 @@ public class ThreadIIIII  {
         }catch (Exception e) {
             e.printStackTrace();
         }
+        Thread.sleep( 1000 );
         System.out.println("main结束=============>共耗时"+(System.currentTimeMillis()  - startMainDate.getTime())+"毫秒");
     }
 }

@@ -16,6 +16,7 @@ public class ThreadII {
          */
         //thread1.start();
         //thread2.start();
+        System.out.println("=========================================>");
         /**
          * 直接使用对象调用方法，
          * 那必须是这个方法执行完了代码才能往下走
@@ -26,7 +27,7 @@ public class ThreadII {
 
     public static void test() {
         try {
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < 3; i++) {
                 System.out.println(i);
                 Thread.sleep(100);
             }
