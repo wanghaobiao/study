@@ -7,7 +7,6 @@ package com.study.basics.multiThread.thread;
  */
 public class ThreadIIIIIIII {
 
-
     //线程本地存储变量
     private static final ThreadLocal<Integer> THREAD_LOCAL_NUM = new ThreadLocal<Integer>() {
         @Override
