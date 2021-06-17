@@ -27,19 +27,16 @@ public class ThreadIIIII  {
         System.out.println("main开始=============>"+ DateUtil.toString( startMainDate,DateUtil.DATE_LONG ) );
 
         //创建Callable的对象
-        FutureTask<String> futureTask1 = new FutureTask<String>(new Callable<String>(){
-            @Override
-            public String call() throws Exception {   //重写Callable接口中的call()方法
-                Date startDate = new Date();
-                System.out.println("cell1开始=============>"+ DateUtil.toString( startDate,DateUtil.DATE_LONG ) );
-                Thread.sleep( 3000 );
-                System.out.println("cell1结束=============>共耗时"+(System.currentTimeMillis()  - startDate.getTime())+"毫秒");
-                return "cell1";
-            }
-        });
+        FutureTask<String> futureTask1 = new FutureTask<>( () -> {
+            Date startDate = new Date();
+            System.out.println("cell1开始=============>"+ DateUtil.toString( startDate,DateUtil.DATE_LONG ) );
+            Thread.sleep( 3000 );
+            System.out.println("cell1结束=============>共耗时"+(System.currentTimeMillis()  - startDate.getTime())+"毫秒");
+            return "cell1";
+        } );
 
-
-        FutureTask<String> futureTask2 = new FutureTask<>( () -> {   //重写Callable接口中的call()方法
+        //重写Callable接口中的call()方法
+        FutureTask<String> futureTask2 = new FutureTask<>( () -> {
             Date startDate = new Date();
             System.out.println("cell2开始=============>"+ DateUtil.toString( startDate,DateUtil.DATE_LONG ) );
             Thread.sleep( 6000 );
@@ -47,9 +44,9 @@ public class ThreadIIIII  {
             return "cell2";
         } );
 
-        List<FutureTask> list = new ArrayList<>();
-        list.add( futureTask1 );
-        list.add( futureTask2 );
+        List<FutureTask> futureTasks = new ArrayList<>();
+        futureTasks.add( futureTask1 );
+        futureTasks.add( futureTask2 );
         List<Thread> threadList = new ArrayList<>();
         threadList.add( new Thread(futureTask1) );
         threadList.add( new Thread(futureTask2) );
@@ -59,8 +56,8 @@ public class ThreadIIIII  {
             temp.start();
         }
         try{
-            for (int i = 0; i < list.size(); i++) {
-                System.out.println( "返回结果"+list.get( i ).get() );
+            for (int i = 0; i < futureTasks.size(); i++) {
+                System.out.println( "返回结果"+futureTasks.get( i ).get() );
             }
         }catch (Exception e) {
             e.printStackTrace();

@@ -17,6 +17,8 @@ import java.util.concurrent.locks.ReentrantLock;
  * Lock可以提高多个线程进行读操作的效率。
  * 在性能上来说，如果竞争资源不激烈，两者的性能是差不多的，而当竞争资源非常激烈时（即有大量线程同时竞争），此时Lock的性能要远远优于synchronized。所以说，在具体使用时要根据适当情况选择。
  */
+
+
 public class LockI {
     private ArrayList<Integer> arrayList = new ArrayList<Integer>();
 
@@ -24,6 +26,7 @@ public class LockI {
         final LockI lockI = new LockI();
 
         new Thread(){
+            @Override
             public void run() {
                 lockI.insert(Thread.currentThread());
             };
