@@ -8,14 +8,14 @@ package com.study.basics.multiThread.thread;
 public class ThreadIIIIIIII {
 
     //线程本地存储变量
-    private static final ThreadLocal<Integer> THREAD_LOCAL_NUM = new ThreadLocal<Integer>() {
+    private static  ThreadLocal<Integer> THREAD_LOCAL_NUM = new ThreadLocal<Integer>() {
         @Override
         protected Integer initialValue() {
             return 0;
         }
     };
 
-
+    private static Integer count = 0;
     /**
      * 线程本地存储变量加 5
      */
@@ -24,7 +24,9 @@ public class ThreadIIIIIIII {
             Integer n = THREAD_LOCAL_NUM.get();
             n += 1;
             THREAD_LOCAL_NUM.set(n);
-            System.out.println(Thread.currentThread().getName() + " : ThreadLocal num=" + n);
+            count++;
+            System.out.println(Thread.currentThread().getName() + " : ThreadLocal count=" + count);
+            //System.out.println(Thread.currentThread().getName() + " : ThreadLocal num=" + n);
         }
     }
 
