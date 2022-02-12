@@ -17,7 +17,7 @@ public class threadPoolII {
         ExecutorService fixedThreadPool = Executors.newFixedThreadPool( 4 );
 
         //测试定长线程池，线程池的容量为3，提交5个任务，根据打印结果可以看出先执行前3个任务，3个任务结束后再执行后面的任务
-        for (int i = 1; i <= 5; i++) {
+        for (int i = 1; i <= 10; i++) {
             final int index = i;
             fixedThreadPool.execute( new Runnable() {
                 @Override
@@ -31,5 +31,6 @@ public class threadPoolII {
                 }
             } );
         }
+        System.out.println(111);
     }
 }
