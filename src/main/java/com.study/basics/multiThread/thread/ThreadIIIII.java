@@ -1,7 +1,6 @@
 package com.study.basics.multiThread.thread;
 
 import com.server.basis.util.DateUtil;
-import com.sun.org.apache.regexp.internal.RE;
 
 import java.util.ArrayList;
 import java.util.Date;
